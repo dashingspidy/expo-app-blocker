@@ -26,7 +26,12 @@
   "author": "Arif Hossain <hamid_kawser@hotmail.be> (dashingspidy)",
   "license": "MIT",
   "homepage": "https://github.com/dashingspidy/expo-app-blocker.git#readme",
-  "dependencies": {},
+  "expo": {
+    "plugin": "./app.plugin.js"
+  },
+  "dependencies": {
+    "@expo/config-plugins": "~56.0.9"
+  },
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@types/jest": "^29.2.1",

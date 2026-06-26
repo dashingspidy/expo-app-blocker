@@ -4,6 +4,9 @@
   "workspaces": {
     "": {
       "name": "expo-app-blocker",
+      "dependencies": {
+        "@expo/config-plugins": "~56.0.9",
+      },
       "devDependencies": {
         "@babel/core": "^7.26.0",
         "@types/jest": "^29.2.1",

@@ -1,0 +1,3 @@
+<resources>
+  <string name="expo_app_blocker_accessibility_description">Detects selected apps so they can be blocked.</string>
+</resources>
