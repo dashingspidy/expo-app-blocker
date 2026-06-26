@@ -4,7 +4,6 @@ import {
   AppBlockerPermissionResult,
   ExpoAppBlockerModuleEvents,
   InstalledApp,
-  StartBlockingOptions,
 } from './ExpoAppBlocker.types';
 
 declare class ExpoAppBlockerModule extends NativeModule<ExpoAppBlockerModuleEvents> {
@@ -14,7 +13,7 @@ declare class ExpoAppBlockerModule extends NativeModule<ExpoAppBlockerModuleEven
   selectApps(): Promise<void>;
   getInstalledApps(): Promise<InstalledApp[]>;
   setBlockedApps(packageNames: string[]): Promise<void>;
-  startBlocking(options: StartBlockingOptions): Promise<void>;
+  startBlocking(): Promise<void>;
   stopBlocking(): Promise<void>;
 }
 

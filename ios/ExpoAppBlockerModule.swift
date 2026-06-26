@@ -50,7 +50,7 @@ public class ExpoAppBlockerModule: Module {
     AsyncFunction("setBlockedApps") { (_: [String]) in
     }
 
-    AsyncFunction("startBlocking") { (_: [String: Any]) in
+    AsyncFunction("startBlocking") {
       self.applyShield(self.loadSelection())
     }
 

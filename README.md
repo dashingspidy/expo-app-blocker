@@ -58,7 +58,7 @@ const permission = await ExpoAppBlocker.requestPermissions();
 
 if (permission.status === "granted") {
   await ExpoAppBlocker.selectApps();
-  await ExpoAppBlocker.startBlocking({ schedules: [] });
+  await ExpoAppBlocker.startBlocking();
 }
 ```
 
@@ -102,7 +102,7 @@ await ExpoAppBlocker.setBlockedApps([
   "com.zhiliaoapp.musically"
 ]);
 
-await ExpoAppBlocker.startBlocking({ schedules: [] });
+await ExpoAppBlocker.startBlocking();
 ```
 
 Stop blocking:
@@ -177,10 +177,10 @@ Sets blocked Android package names.
 
 No-op on iOS because iOS stores selected app tokens from `selectApps()`.
 
-### `startBlocking(options)`
+### `startBlocking()`
 
 ```ts
-await ExpoAppBlocker.startBlocking({ schedules: [] });
+await ExpoAppBlocker.startBlocking();
 ```
 
 Starts blocking selected apps.
@@ -208,20 +208,6 @@ await ExpoAppBlocker.openAccessibilitySettings();
 ```
 
 Opens Android Accessibility settings.
-
-## Schedules
-
-The API accepts a `schedules` array, but scheduled blocking is not implemented yet.
-
-Current behavior:
-
-- `startBlocking()` turns blocking on immediately
-- `stopBlocking()` turns blocking off immediately
-
-Planned schedule support:
-
-- iOS: `DeviceActivityMonitor` extension
-- Android: `AlarmManager` or `WorkManager`
 
 ## Platform notes
 

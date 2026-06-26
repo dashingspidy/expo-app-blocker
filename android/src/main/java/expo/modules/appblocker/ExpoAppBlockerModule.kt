@@ -52,7 +52,7 @@ class ExpoAppBlockerModule : Module() {
       AppBlockerStore.setBlockedPackages(context, packageNames.toSet())
     }
 
-    AsyncFunction("startBlocking") { options: Map<String, Any?> ->
+    AsyncFunction("startBlocking") {
       val context = appContext.reactContext ?: return@AsyncFunction
       AppBlockerStore.setBlockingEnabled(context, true)
       val intent = Intent(context, AppBlockerForegroundService::class.java)
